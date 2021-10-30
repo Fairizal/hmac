@@ -8,8 +8,6 @@ $password = trim(fgets(STDIN));
 echo "Masukkan MAC : ";
 $macExpect = trim(fgets(STDIN));
 
-// $mac = hash_hmac("sha1", $fileName, $password);
-
 if (file_exists($fileName)) {
 	$mac = hash_hmac_file("sha1", $fileName, '12345');
 
